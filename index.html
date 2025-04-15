@@ -2,11 +2,11 @@
 <html>
 <head>
 <link rel="stylesheet" href="styles.css">
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32i" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<link rel="manifest" href="/site.webmanifest">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon.ico">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32i" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<link rel="manifest" href="site.webmanifest">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon.ico">
 </head>
 <body>
 <center> <h1 id="heading"> iframe test for player Beta </h1> </center>
@@ -18,23 +18,24 @@
     </div>
   </div>
 </div>
-<center> <iframe style="border: none; width: 100%; aspect-ratio: 9/16;" src="//e-qa1.video-cdn.net/watch?video-id=6uhPptuyRhCFPMVE2Y8hEh&player-id=5bNZJfuM477L_-AxBzmAym&channel-id=12913" allowfullscreen allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share;" frameborder="0"></iframe>
-
-
-
-
-
-
-
+<center>
+<div style="padding:56.25% 0 0 0;position:relative;">
+<iframe id="playerfr" src="https://e-qa1.video-cdn.net/watch?video-id=B8mzuES6C185b5on4JwD21&player-id=2veN_8KUdkudaCJwnUqAwf&channel-id=72968" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+</div>
 </center>
 <br>
 <br>
 <center>
-<button class="noselect">Play</button>
-<button class="noselect">Pause</button>
-<button class="noselect">Volume (+)</button>
-<button class="noselect">Volume (-)</button>
-<button class="noselect">Full screen</button>
+<button id="play" class="noselect">Play</button>
+<button id="pause"class="noselect">Pause</button>
+<button id="mute" class="noselect">Mute</button>
+<button id="unmute" class="noselect">Unmute</button>
+<button id="getvolume" class="noselect">Get Volume</button>
+<button id="ismuted" class="noselect">is Muted</button>
+<label for="volumeSlider" class="noselect">Set Volume:</label>
+<input type="range" id="volumeSlider" min="0.1" max="1.0" step="0.1" value="1.0">
+<span id="volumeValue">1.0</span>
 </center>
+<script type="module" src="main.js"></script>
 </body>
 </html>
