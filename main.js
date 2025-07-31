@@ -1,11 +1,6 @@
 import { Player } from 'https://e-qa1.video-cdn.net/mi-player-sdk-qa/mi-player-sdk.js';
 
 const player = new Player('playerfr');
-player.autoplay()
-        .then(() => {
-            console.log("video playing")
-    })
-.catch((error)=>{console.log("error",error)});
 
 
 const playBtn = document.querySelector("#play");
